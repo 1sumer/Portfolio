@@ -11506,8 +11506,8 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("D:\Html\Portfolio\html\assets\imgs\My first design 1.png");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("D:\Html\Portfolio\html\assets\imgs\My first design 1.png");
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/My\ first\ design\ 1.png);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/My\ first\ design\ 1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
