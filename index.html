@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgZmlsbD0iIzRmZDFkOSIgcj0iMzAiLz48cGF0aCBkPSJtMjAuNCAxNy4xaDYuMnYxNy44YzAgMiAuMiAzLjQuNyA0LjQuNyAxLjYgMi4zIDIuNCA0LjggMi40IDIuNCAwIDQtLjggNC44LTIuNC41LS45LjctMi40LjctNC40di0xNy44aDYuMnYxNy45YzAgMy4xLS41IDUuNS0xLjQgNy4yLTEuOCAzLjEtNS4yIDQuNy0xMC4yIDQuN3MtOC40LTEuNi0xMC4yLTQuN2MtMS0xLjctMS40LTQuMS0xLjQtNy4yeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="
+        type="image/png"> <!-- Replace with your logo path -->
+
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Text typing animation */
+        .typing {
+            border-right: 2px solid yellow;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 2s steps(10, end) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <!-- Header with Navigation Tabs -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-500">Sumer Pasha</h1>
+            <!-- Hamburger Icon for Mobile View -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-800 text-gray-300 hidden">
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-700 transition">About</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-700 transition">Skills</a>
+            <a href="#experience" class="block px-4 py-2 hover:bg-gray-700 transition">Experience</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-gray-700 transition">Projects</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-700 transition">Contact</a>
+        </div>
+    </header>
+
+
+
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar with Contact Info -->
+        <!-- Sidebar with Contact Info -->
+        <aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
+            <div class="text-center mb-8">
+                <img src="assets/imgs/Sameer.jpg"
+                    alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
+                <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
+            </div>
+            <div class="flex justify-center space-x-4 text-yellow-500 mb-4">
+                <p class="flex items-center">
+                    <a href="mailto:sameerpasha658@gmail.com" class="flex items-center hover:text-white">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </p>
+                <p class="flex items-center">
+                    <a href="tel:+918088989186" class="flex items-center hover:text-white">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/1sumer" class="flex items-center hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/sumer-pasha-70884a152/"
+                        class="flex items-center hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://1sumer.github.io/Sumer-Portfolio/" class="flex items-center hover:text-white">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/sameerpasha.78/" class="flex items-center hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+            </div>
+
+            <!-- <div class="text-gray-400 text-center">
+        <p>udaykumargjewoor@gmail.com</p>
+        <p>+91 7259931948</p>
+    </div> -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-8">
+            <!-- About Section -->
+            <section id="about" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
+                <p class="text-gray-300">
+                    Data Analyst and Python Automation Engineer with 1 year of experience in automating workflows, data analysis, and
+                    visualization. Proficient in SQL, Python, and ETL processes to extract, transform, and load data into structured systems for
+                    analysis. Skilled in creating interactive dashboards and building automation solutions to optimize business operations. Adept at using Python for data-driven insights, improving processes, and driving efficiency.
+
+                </p>
+
+                <div class="mt-6 flex space-x-4">
+                    <a href="mailto:sameerpasha658@gmail.com"
+                        class="inline-block px-6 py-2 text-white bg-yellow-500 hover:bg-yellow-600 rounded transition duration-300">
+                        Hire Me
+                    </a>
+                    <a href="https://drive.google.com/file/d/1h5WbanzN7aG-wH9FTWtvayFA-Tyev_TY/view?usp=drive_link"
+                        target="_blank"
+                        class="inline-block px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300">
+                        Resume
+                    </a>
+                </div>
+            </section>
+
+            <!-- Profile Summary Section -->
+            <section id="profile" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
+                <ul class="list-disc ml-6 text-gray-300">
+                    <li>Experienced Data Analyst: Over 1 year of experience in data analysis, automation, and visualization, delivering actionable insights to enhance business operations and decision-making.</li>
+                    <li>Technical Expertise: Proficient in Python, SQL, R, and ETL processes, with a strong focus on data cleaning, modeling, and structuring for efficient querying and analysis.</li>
+                    <li>Automation Skills: Developed Python-based automation solutions, including email campaigns and invoicing systems, reducing manual workloads and improving efficiency.</li>
+                    <li>Visualization Proficiency: Skilled in creating interactive dashboards using Power BI and Matplotlib to monitor KPIs, trends, and performance metrics, improving decision-making efficiency.</li>
+                    <li>Machine Learning Foundations: Hands-on experience in implementing supervised and unsupervised learning models using Scikit-Learn, deriving predictive insights from complex datasets.</li>
+                    <li>Possess strong database management skills, optimizing data storage and retrieval efficiency with
+                        MySQL and MongoDB.</li>
+                </ul>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Python</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-database text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">SQL</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-chart-line text-4xl text-yellow-400 mb-2"></i>
+                        <span class="text-gray-300">ETL & EDA</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-database text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">MongoDB</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-chart-bar text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Power BI</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-palette text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Seaborn</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-robot text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Machine Learning</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-cogs text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Scikit-Learn</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-chart-pie text-4xl text-yellow-400 mb-2"></i>
+                        <span class="text-gray-300">R</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-code-branch text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Git</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-github text-4xl text-yellow mb-2"></i>
+                        <span class="text-gray-300">GitHub</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-signal text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Statistics</span>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <!-- Experience Section -->
+            <section id="experience" class="mb-10 fade-in">
+                <!-- Internship Section -->
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Internships</h2>
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">
+                        Python Automation Engineer
+                    </h3>
+                    <p class="text-gray-400">Analogica Software Dev Pvt Ltd, Bengaluru, Karnataka</p>
+                    <p class="text-gray-400">06/2022 – 01/2023</p>
+                    <a href="https://drive.google.com/file/d/1Ezk3MuKaRGdLPZZK4j-RHb4rkM5ONi3v/view?usp=drive_link" target="_blank"
+                        class="text-yellow-400 hover:underline">Click here</a>
+                </div>
+
+
+                <!-- Professional Experience Section -->
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Professional Experience</h2>
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Data Analyst & Python Automation Engineer</h3>
+                    <p class="text-gray-400">Analogica Software Dev Pvt Ltd </p>
+                    <p class="text-gray-400">03/2023 – Present</p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Developed Python scripts for automating data collection and cleaning, saving 15+ hours per week and ensuring data
+                            consistency.</li>
+                        <li>Built SQL-based ETL pipelines to manage and structure data for analysis, improving data processing time by 30%.</li>
+                        <li>Designed interactive Power BI dashboards for tracking KPIs and business trends, enhancing decision-making efficiency by 25%.</li>
+                        <li>Conducted exploratory data analysis (EDA) to uncover actionable insights that informed business strategy and improved
+                            operational efficiency by 19%.</li>
+                        <li>Automated mass email campaigns and invoicing using Python, reducing manual workload by 40%.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Projects</h2>
+
+                <!-- Resume Parser Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Global Superstore Sales Profitability Analysis.</h3>
+                    <p class="text-gray-400 list-disc ml-5 mt-2">
+                        Analyzing the sales performance and profitability across regions and product categories in the Global Store dataset provides key insights for business strategy and growth.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Tools Used: SQL, Python, Power BI, Pandas, Numpy</li>
+                        <li>Analyzed sales, profitability, and shipping dynamics to deliver actionable insights for improving customer satisfaction and operational efficiency.</li>
+                        <li>Built visualizations to identify high-performing products, regions, and customer segments, enabling data-informed
+                            decision-making.</li>
+                    </ul>
+                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
+                </div>
+
+                <!-- Fastays Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">IMDb Movie Recommender System</h3>
+                    <p class="text-gray-400 list-disc ml-5 mt-2">
+                        An IMDb Movie Recommender System that suggests personalized movie recommendations based on user preferences and ratings.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Tools Used: Python, Scikit-Learn, Pandas, NumPy, Statistics</li>
+                        <li>Improved user experience by delivering personalized movie
+                            recommendations based on user behavior and movie attributes.</li>
+                    </ul>
+                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
+                </div>
+
+                <!-- Fastays Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Automated Bulk Email Sender Using SMTP Server</h3>
+                    <p class="text-gray-400 list-disc ml-5 mt-2">
+                        Mass Emailer is a Python-based application designed to send bulk emails efficiently using an SMTP server.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Bulk Email Sending: Facilitate the sending of large numbers of emails simultaneously.</li>
+                        <li>User-Friendly Interface: Utilize Tkinter to create an intuitive and accessible GUI.</li>
+                        <li>SMTP Integration: Seamlessly connect with SMTP servers to handle email delivery.</li>
+                    </ul>
+                    <p class="text-gray-400 list-disc ml-5 mt-2">06/2024</p> <!--Data Here-->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Contact Me</h2>
+                <form id="contact-form" class="space-y-4">
+                    <input type="text" name="name" placeholder="Your Name"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required>
+                    <input type="email" name="email" placeholder="Your Email"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required>
+                    <textarea name="message" rows="5" placeholder="Your Message"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required></textarea>
+                    <button type="submit"
+                        class="w-full bg-yellow-500 text-black p-2 rounded hover:bg-yellow-400 transition">Send
+                        Message</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <p class="text-gray-400">&copy; 2025 Sumer Pasha. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("91E1CCWAiHScoS7Vt"); // Replace with your EmailJS user ID
+        })();
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_aptluqf', 'template_dx55q48', this)
+                .then(function () {
+                    alert("Message sent successfully!");
+                }, function (error) {
+                    alert("Failed to send the message. Please try again.");
+                    console.log('EmailJS error:', error);
+                });
+        });
+
+        // Text Animation for Role
+        const roles = ["Data Analyst", "Machine Learning Engineer", "Python Automation Engineer"];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        const roleElement = document.getElementById("role");
+
+        function type() {
+            if (currentCharIndex < roles[currentRoleIndex].length) {
+                roleElement.textContent += roles[currentRoleIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(type, 100); // Speed of typing
+            } else {
+                setTimeout(deleteRole, 1000); // Pause before deleting
+            }
+        }
+
+        function deleteRole() {
+            if (currentCharIndex > 0) {
+                roleElement.textContent = roleElement.textContent.slice(0, -1);
+                currentCharIndex--;
+                setTimeout(deleteRole, 50); // Speed of deleting
+            } else {
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                setTimeout(type, 500); // Pause before typing next role
+            }
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Start the typing animation
+        document.addEventListener("DOMContentLoaded", type);
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
