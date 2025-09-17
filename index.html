@@ -1,596 +1,155 @@
-<!DOCTYPE html>
+<!-- Home Page HTML here -->
+ <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumer Pasha</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon"
-        href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgZmlsbD0iIzRmZDFkOSIgcj0iMzAiLz48cGF0aCBkPSJtMjAuNCAxNy4xaDYuMnYxNy44YzAgMiAuMiAzLjQuNyA0LjQuNyAxLjYgMi4zIDIuNCA0LjggMi40IDIuNCAwIDQtLjggNC44LTIuNC41LS45LjctMi40LjctNC40di0xNy44aDYuMnYxNy45YzAgMy4xLS41IDUuNS0xLjQgNy4yLTEuOCAzLjEtNS4yIDQuNy0xMC4yIDQuN3MtOC40LTEuNi0xMC4yLTQuN2MtMS0xLjctMS40LTQuMS0xLjQtNy4yeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="
-        type="image/png"> <!-- Replace with your logo path -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sumer Pasha — Data Analyst & Python Automation Engineer</title>
 
-    <style>
-        /* Custom animations */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hover\:scale-105:hover {
-            transform: scale(1.05);
-        }
-
-        .transition-all {
-            transition: all 0.3s ease;
-        }
-
-        /* Text typing animation */
-        .typing {
-            border-right: 2px solid yellow;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            animation: typing 2s steps(10, end) forwards, blink 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-    </style>
+  <!-- Tailwind CDN (keeps markup concise) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom styles (dark theme + accent) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%230ea5a4%22/></svg>">
 </head>
+<body class="text-gray-200">
 
-<body class="bg-gray-900 text-gray-200 font-sans">
-
-    <!-- Header with Navigation Tabs -->
-    <header class="bg-gray-800 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-yellow-500">Sumer Pasha</h1>
-            <!-- Hamburger Icon for Mobile View -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="hidden md:flex space-x-4">
-                <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
-                <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
-                <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
-                <a href="#blogs" class="text-gray-300 hover:text-yellow-500 transition">Blogs</a>
-                <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
-            </nav>
+  <!-- SITE HEADER / NAV -->
+  <header class="site-header py-4">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-teal-600 to-cyan-400 flex items-center justify-center text-white font-bold">SP</div>
+        <div>
+          <div class="text-white font-semibold">Sumer Pasha</div>
+          <div class="text-xs text-muted text-gray-400">Data Analyst • Python Automation Engineer • Machine Learning Engineer</div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-gray-800 text-gray-300 hidden">
-            <a href="#about" class="block px-4 py-2 hover:bg-gray-700 transition">About</a>
-            <a href="#skills" class="block px-4 py-2 hover:bg-gray-700 transition">Skills</a>
-            <a href="#experience" class="block px-4 py-2 hover:bg-gray-700 transition">Experience</a>
-            <a href="#projects" class="block px-4 py-2 hover:bg-gray-700 transition">Projects</a>
-            <a href="#blogs" class="block px-4 py-2 hover:bg-gray-700 transition">Blogs</a>
-            <a href="#contact" class="block px-4 py-2 hover:bg-gray-700 transition">Contact</a>
-        </div>
-    </header>
+      </a>
 
-    <div class="flex flex-col md:flex-row">
-        <!-- Sidebar with Contact Info -->
-        <!-- Sidebar with Contact Info -->
-        <aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
-            <div class="text-center mb-8">
-                <img src="assets/imgs/Sameer.jpg"
-                    alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
-                <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
-            </div>
-            <div class="flex justify-center space-x-4 text-yellow-500 mb-4">
-                <p class="flex items-center">
-                    <a href="mailto:sameerpasha658@gmail.com" class="flex items-center hover:text-white">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </p>
-                <p class="flex items-center">
-                    <a href="tel:+918088989186" class="flex items-center hover:text-white">
-                        <i class="fas fa-phone-alt"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="https://github.com/1sumer" class="flex items-center hover:text-white">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.linkedin.com/in/sumer-pasha-70884a152/"
-                        class="flex items-center hover:text-white">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="https://1sumer.github.io/Portfolio/" class="flex items-center hover:text-white">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.instagram.com/sameerpasha.78/" class="flex items-center hover:text-white">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </p>
-            </div>
+      <nav class="hidden md:flex items-center space-x-4" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="certifications.html">Certifications</a>
+        <a class="nav-link" href="blogs.html">Blogs</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
 
-            <!-- <div class="text-gray-400 text-center">
-        <p>sameerpasha658@gmail.com</p>
-        <p>+91 8088989186</p>
-    </div> -->
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-1 p-6 md:p-8">
-            <!-- About Section -->
-            <section id="about" class="mb-10 fade-in">
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
-                <p class="text-gray-300">
-                    Data Analyst and Python Automation Engineer with 2 year of experience in automating workflows, data analysis, and
-                    visualization. Proficient in SQL, Python, and ETL processes to extract, transform, and load data into structured systems for
-                    analysis. Skilled in creating interactive dashboards and building automation solutions to optimize business operations. 
-                    Adept at using Python for data-driven insights, improving processes, and driving efficiency.
-                </p>
-
-                <div class="mt-6 flex space-x-4">
-                    <a href="mailto:sameerpasha658@gmail.com"
-                        class="inline-block px-6 py-2 text-white bg-yellow-500 hover:bg-yellow-600 rounded transition duration-300">
-                        Hire Me
-                    </a>
-                    <a href="https://drive.google.com/file/d/1Zn-rskSdgfD5Mu5AWXDMwe4jRnnjBoHe/view?usp=sharing"
-                        target="_blank"
-                        class="inline-block px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300">
-                        Resume
-                    </a>
-                </div>
-            </section>
-
-            <!-- Profile Summary Section -->
-            <section id="profile" class="mb-10 fade-in">
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
-                <ul class="list-disc ml-6 text-gray-300">
-                    <li><b>Experienced Data Analyst:</b> Over 1 year of experience in data analysis, automation, and visualization, delivering actionable insights to enhance business operations and decision-making.</li><br>
-                    <li><b>Technical Expertise:</b> Proficient in Python, SQL, R, and ETL processes, with a strong focus on data cleaning, modeling, and structuring for efficient querying and analysis.</li><br>
-                    <li><b>Automation Skills:</b> Developed Python-based automation solutions, including email campaigns and invoicing systems, reducing manual workloads and improving efficiency.</li><br>
-                    <li><b>Visualization Proficiency:</b> Skilled in creating interactive dashboards using Power BI and Matplotlib to monitor KPIs, trends, and performance metrics, improving decision-making efficiency.</li><br>
-                    <li><b>Machine Learning Foundations:</b> Hands-on experience in implementing supervised and unsupervised learning models using Scikit-Learn, deriving predictive insights from complex datasets.</li><br>
-                    <li>Possess strong database management skills, optimizing data storage and retrieval efficiency with MySQL and MongoDB.</li>
-                </ul>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="mb-10 fade-in">
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Python</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-database text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">SQL</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-chart-pie text-4xl text-yellow-400 mb-2"></i>
-                        <span class="text-gray-300">R</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-table text-4xl text-green-400 mb-2"></i>
-                        <span class="text-gray-300">Pandas</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-palette text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Seaborn</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-server text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Data Processing</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-broom text-4xl text-pink-400 mb-2"></i>
-                        <span class="text-gray-300">Data Cleaning</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-chart-line text-4xl text-yellow-400 mb-2"></i>
-                        <span class="text-gray-300">ETL & EDA</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-database text-4xl text-yellow-400 mb-2"></i>
-                        <span class="text-gray-300">MySQL</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-database text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">MongoDB</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-chart-line text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Data Visualization</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fab fa-microsoft text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Power BI</span>
-                    </div>
-                    
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-robot text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Machine Learning</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-cogs text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Scikit-Learn</span>
-                    </div>
-                    
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-code-branch text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Git</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fab fa-github text-4xl text-yellow mb-2"></i>
-                        <span class="text-gray-300">GitHub</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-signal text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Statistics</span>
-                    </div> 
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-layer-group text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">PySpark</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-code text-4xl text-yellow-500 mb-2"></i>
-                        <span class="text-gray-300">Web Scraping</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-cloud text-4xl text-blue-400 mb-2"></i>
-                        <span class="text-gray-300">AWS</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-chart-line text-4xl text-blue-400 mb-2"></i>
-                        <span class="text-gray-300 text-center">Business Intelligence<br>Dashboard | Reporting | KPI</span>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
-                        <i class="fas fa-users text-4xl text-purple-400 mb-2"></i>
-                        <span class="text-gray-300 text-center">Soft Skills<br>Problem-Solving, Analytical Thinking, Collaboration</span>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- Experience Section -->
-            <section id="experience" class="mb-10 fade-in">
-                <!-- Internship Section -->
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Internships</h2>
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">
-                        Python Automation Engineer
-                    </h3>
-                    <p class="text-gray-400">Analogica Software Dev Pvt Ltd, Bengaluru, Karnataka</p>
-                    <p class="text-gray-400">06/2022 – 01/2023</p>
-                    <a href="https://drive.google.com/file/d/1Ezk3MuKaRGdLPZZK4j-RHb4rkM5ONi3v/view?usp=drive_link" target="_blank"
-                        class="text-yellow-400 hover:underline">Click here</a>
-                </div>
-
-
-                <!-- Professional Experience Section -->
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Professional Experience</h2>
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Data Analyst & Python Automation Engineer</h3>
-                    <p class="text-gray-400">Analogica Software Dev Pvt Ltd </p>
-                    <p class="text-gray-400">03/2023 – Present</p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Developed Python scripts for automating data collection and cleaning, saving 15+ hours per week and ensuring data
-                            consistency.</li>
-                        <li>Built SQL-based ETL pipelines to manage and structure data for analysis, improving data processing time by 30%.</li>
-                        <li>Designed interactive Power BI dashboards for tracking KPIs and business trends, enhancing decision-making efficiency by 25%.</li>
-                        <li>Conducted exploratory data analysis (EDA) to uncover actionable insights that informed business strategy and improved
-                            operational efficiency by 19%.</li>
-                        <li>Automated mass email campaigns and invoicing using Python, reducing manual workload by 40%.</li>
-                    </ul>
-                </div>
-
-            </section>
-
-            <!-- Certifications -->
-            <section id="certifications" class="mb-10 fade-in">
-
-                <!-- Professional Experience Section -->
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Certificates</h2>
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Scala Programming for Data Science.</li>
-                        <li>Diploma in Machine Learning & AI.</li>
-                        <li>Data Analytics with Python & SQL.</li>
-                        <li>Data Visualization: Empowering Business with Effective Insights.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="mb-10 fade-in">
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Projects</h2>
-                
-                <!-- Project 1 -->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Form Automation & Notification System.</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        Form Automation & Notification System – An n8n-based workflow that automates form submissions by storing data, sending user confirmations, and notifying admins in real time.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Tools Used: n8n, Google Forms/Custom HTML, Google Sheets/MySQL, Gmail.</li>
-                        <li>Automated the handling of form submissions, eliminating manual effort.</li>
-                        <li>Integrated Google Forms/HTML forms with Google Sheets/MySQL for structured data storage.</li>
-                        <li>Designed workflows in n8n to capture data via webhooks and trigger automated actions.</li>
-                        <li>Implemented automated confirmation emails to users, ensuring instant feedback and trust.</li>
-                        <li>Configured admin notifications to provide real-time alerts of new registrations.</li>
-                        <li>Sent webhook responses to the frontend with success messages for smooth UX.</li>
-                        <li>Workflow covered: Webhook → Database/Sheets → User Email → Admin Email → Response.</li>
-                    </ul>
-                    <p><b>GitHub Repo:</b> <a href="https://github.com/1sumer/Python_Interactive_Projects/tree/main/Form%20Automation%20%26%20Notification%20System" target="_blank">Form Automation & Notification System</a></p>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Crop & Fertilizer Recommendation System.</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        Developed a Flask-based web application that predicts the optimal crop to grow based on soil and weather conditions and recommends the right fertilizer for a healthier yield using a Random Forest Classifier.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Tools Used: Python, Tkinter, Pandas, scikit-learn, Numpy, Flask, Render.</li>
-                        <li>Implemented a machine learning model integrated with a Python backend and deployed the solution on Render Cloud.</li>
-                        <li>Planned future enhancements include integrating a real-time weather API for dynamic predictions, deploying on AWS SageMaker for scalability, and expanding to a mobile app version.</li>
-                    </ul>
-                    <p><b>Live App:</b> <a href="https://agriculture-pridiction.onrender.com/" target="_blank">https://agriculture-pridiction.onrender.com/</a></p>
-                    <p><b>GitHub Repo:</b> <a href="https://github.com/1sumer/Agriculture_Pridiction" target="_blank">Agriculture_Pridiction</a></p>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Global Superstore Sales Profitability Analysis.</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        Analyzing the sales performance and profitability across regions and product categories in the Global Store dataset provides key insights for business strategy and growth.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Tools Used: SQL, Python, Power BI, Pandas, Numpy</li>
-                        <li>Analyzed sales, profitability, and shipping dynamics to deliver actionable insights for improving customer satisfaction and operational efficiency.</li>
-                        <li>Built visualizations to identify high-performing products, regions, and customer segments, enabling data-informed
-                            decision-making.</li>
-                    </ul>
-                    <p><b>GitHub Repo:</b> <a href="https://github.com/1sumer/Python-EDA-Projects/tree/main/Global_Store" target="_blank">Global Superstore Sales Profitability Analysis</a></p>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-
-                <!-- Project 4-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">IMDb Movie Recommender System</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        An IMDb Movie Recommender System that suggests personalized movie recommendations based on user preferences and ratings.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Tools Used: Python, Scikit-Learn, Pandas, NumPy, Statistics.</li>
-                        <li>Improved user experience by delivering personalized movie
-                            recommendations based on user behavior and movie attributes.</li>
-                    </ul>
-                    <p><b>GitHub Repo:</b> <a href="https://github.com/1sumer/Machine_Learning/tree/main/Recommendation/Movie_I%20Recommender" target="_blank">IMDb Movie Recommender System</a></p>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-
-                <!-- Project 5-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Automated Bulk Email Sender Using SMTP Server</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        Mass Emailer is a Python-based application designed to send bulk emails efficiently using an SMTP server.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Bulk Email Sending: Facilitate the sending of large numbers of emails simultaneously.</li>
-                        <li>User-Friendly Interface: Utilize Tkinter to create an intuitive and accessible GUI.</li>
-                        <li>SMTP Integration: Seamlessly connect with SMTP servers to handle email delivery.</li>
-                    </ul>
-                    <p><b>GitHub Repo:</b> <a href="https://github.com/1sumer/Python_Interactive_Projects/tree/main/Mass-Mail-Automation" target="_blank">Automated Bulk Email Sender Using SMTP Server</a></p>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-
-                <!-- Project 6-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">E-Commerce Data Extraction and Analysis</h3>
-                    <p class="text-gray-400 list-disc ml-5 mt-2">
-                        Automating the extraction and analysis of e-commerce data for actionable insights.
-                    </p>
-                    <ul class="text-gray-400 list-disc ml-5 mt-2">
-                        <li>Tools Used: Python (BeautifulSoup, Pandas), Power BI.</li>
-                        <li>Scraped and analyzed product data from e-commerce platforms to identify pricing trends and market positioning.</li>
-                        <li>Delivered insights that aided competitive strategy formulation.</li>
-                    </ul>
-                    <p class="text-gray-400 list-disc ml-5 mt-2"></p> <!--Data Here-->
-                </div>
-            </section>
-
-            <!-- blogs -->
-            <section id="blogs" class="mb-10 fade-in">
-                <!-- Blogs Section -->
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Blogs</h2>
-
-                <!-- Blogs 1-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">
-                        Python’s Oop's Revolution
-                    </h3>
-                    <p class="text-gray-400">Explored how Python’s Object-Oriented Programming (OOP) features simplify code organization, enhance reusability, and
-                        support scalable application development.</p>
-                    <a href="https://certisured.com/blogs/python-oop-revolution" target="_blank"
-                        class="text-yellow-400 hover:underline">Click here</a>
-                </div>
-              
-                <!-- Blogs 2-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">
-                        The Importance of SQL in Today's World: A Fundamental Data Manipulation Language
-                    </h3>
-                    <p class="text-gray-400">Highlighted the critical role of SQL in modern data management, showcasing its applications in querying, data manipulation, and
-                        supporting data-driven decision-making.</p>
-                    <a href="https://certisured.com/blogs/the-importance-of-sql-in-today-s-world-a-fundamental-data-manipulation-language" target="_blank"
-                        class="text-yellow-400 hover:underline">Click here</a>
-                </div>
-
-                <!-- Blogs 3-->
-                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">
-                        Exploring the Core Principles of Decision Tree in Machine Learning
-                    </h3>
-                    <p class="text-gray-400">Decision trees in machine learning are a predictive modeling tool that splits data into branches based on feature values to make decisions or predictions. 
-                        They work by recursively partitioning the dataset into subsets, aiming to maximize information gain or minimize impurity at each split.</p>
-                    <a href="https://certisured.com/blogs/exploring-the-core-principles-of-decision-tree-in-machine-learning" target="_blank"
-                        class="text-yellow-400 hover:underline">Click here</a>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="mb-10 fade-in">
-                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Contact Me</h2>
-                <form id="contact-form" class="space-y-4">
-                    <input type="text" name="name" placeholder="Your Name"
-                        class="w-full p-2 rounded bg-gray-700 text-white" required>
-                    <input type="email" name="email" placeholder="Your Email"
-                        class="w-full p-2 rounded bg-gray-700 text-white" required>
-                    <textarea name="message" rows="5" placeholder="Your Message"
-                        class="w-full p-2 rounded bg-gray-700 text-white" required></textarea>
-                    <button type="submit"
-                        class="w-full bg-yellow-500 text-black p-2 rounded hover:bg-yellow-400 transition">Send
-                        Message</button>
-                </form>
-            </section>
-
-        </main>
+      <button id="mobile-toggle" class="md:hidden bg-transparent p-2 rounded text-gray-200" aria-label="Open mobile menu">☰</button>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 p-4 text-center">
-        <p class="text-gray-400">&copy; 2025 Sumer Pasha. All rights reserved.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <div id="mobile-menu" class="hidden md:hidden container mt-2">
+      <a class="block py-2" href="index.html">Home</a>
+      <a class="block py-2" href="projects.html">Projects</a>
+      <a class="block py-2" href="skills.html">Skills</a>
+      <a class="block py-2" href="experience.html">Experience</a>
+      <a class="block py-2" href="certifications.html">Certifications</a>
+      <a class="block py-2" href="blogs.html">Blogs</a>
+      <a class="block py-2" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-    <script>
-        (function () {
-            emailjs.init("Wo6IUsK3yAOZ-zIvW"); // Replace with your EmailJS user ID
-        })();
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
+  <!-- MAIN CONTENT -->
+  <main class="container mt-8">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <div class="card">
+          <div class="flex items-start gap-6">
+            <div>
+              <h1 class="text-3xl font-bold text-white">Hi, I'm Sumer Pasha</h1>
+              <h3 class="text-2xl font-bold text-white">A Data Analyst, Python Automation Engineer and Machine Learning Engineer</h3>
+              <p class="mt-3 text-gray-300">
+                Data Analyst and Python Automation Engineer with 2 year of experience in automating workflows, data analysis, and visualization. Proficient in SQL, Python, and ETL processes to extract, transform, and load data into structured systems for analysis. Skilled in creating interactive dashboards and building automation solutions to optimize business operations. Adept at using Python for data-driven insights, improving processes, and driving efficiency.
+              </p>
 
-            emailjs.sendForm('service_iq6spvo', 'template_5g838rg', this)
-                .then(function () {
-                    alert("Message sent successfully!");
-                }, function (error) {
-                    alert("Failed to send the message. Please try again.");
-                    console.log('EmailJS error:', error);
-                });
-        });
+              <div class="mt-4 flex gap-3">
+                <a class="button-accent" href="contact.html">Hire Me</a>
+                <a class="button-accent" href="https://drive.google.com/file/d/1Zn-rskSdgfD5Mu5AWXDMwe4jRnnjBoHe/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Resume</a>
+              </div>
 
-        // Text Animation for Role
-        const roles = ["Data Analyst", "Machine Learning Engineer", "Python Automation Engineer"];
-        let currentRoleIndex = 0;
-        let currentCharIndex = 0;
-        const roleElement = document.getElementById("role");
+              <div class="mt-4 text-sm text-gray-400">
+                <strong class="text-white">Top skills:</strong> Python, SQL, Power BI, Machine Learning, Data Analysis, Data Processing
+              </div>
+            </div>
+          </div>
+        </div>
 
-        function type() {
-            if (currentCharIndex < roles[currentRoleIndex].length) {
-                roleElement.textContent += roles[currentRoleIndex].charAt(currentCharIndex);
-                currentCharIndex++;
-                setTimeout(type, 100); // Speed of typing
-            } else {
-                setTimeout(deleteRole, 1000); // Pause before deleting
-            }
-        }
+        <!-- condensed profile summary -->
+        <div class="card mt-6">
+          <h2 class="text-xl font-semibold text-white">Profile Summary</h2>
+          <ul class="mt-3 list-disc ml-5 text-gray-300">
+            <li><b>Experienced Data Analyst:</b> Over 1 year of experience in data analysis, automation, and visualization, delivering actionable insights to enhance business operations and decision-making.</li>
+            <li><b>Technical Expertise:</b> Proficient in Python, SQL, R, and ETL processes, with a strong focus on data cleaning, modeling, and structuring for efficient querying and analysis.</li>
+            <li><b>Automation Skills:</b> Developed Python-based automation solutions, including email campaigns and invoicing systems, reducing manual workloads and improving efficiency.</li>
+            <li><b>Visualization Proficiency:</b> Skilled in creating interactive dashboards using Power BI and Matplotlib to monitor KPIs, trends, and performance metrics, improving decision-making efficiency.</li>
+            <li><b>Machine Learning Foundations:</b> Hands-on experience in implementing supervised and unsupervised learning models using Scikit-Learn, deriving predictive insights from complex datasets.</li>
+            <li>Possess strong database management skills, optimizing data storage and retrieval efficiency with MySQL and MongoDB.</li>
+          </ul>
+        </div>
 
-        function deleteRole() {
-            if (currentCharIndex > 0) {
-                roleElement.textContent = roleElement.textContent.slice(0, -1);
-                currentCharIndex--;
-                setTimeout(deleteRole, 50); // Speed of deleting
-            } else {
-                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-                setTimeout(type, 500); // Pause before typing next role
-            }
-        }
+      </div>
 
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <!-- quick contact / social sidebar -->
+      <aside>
+        <div class="card text-center">
+          <img src="assets/imgs/Sameer.jpg" alt="Sumer" class="hero-photo mx-auto mb-3" />
+          <div class="text-white font-semibold">Sumer Pasha</div>
+          <div class="text-xs text-gray-400">• Data Analyst • Python Automation Engineer • Machine Learning Engineer</div>
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+            <div class="mt-3 grid grid-cols-6 gap-4 text-orange-500 text-xl">
+                <a href="mailto:sameerpasha658@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+918088989186" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/1sumer" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sumer-pasha-70884a152/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://1sumer.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+            </div>
 
-        // Start the typing animation
-        document.addEventListener("DOMContentLoaded", type);
+        <div class="card mt-6">
+          <h3 class="font-semibold text-white">Contact</h3>
+          <p class="text-sm mt-2 text-gray-300">Email: <a class="accent" href="mailto:sameerpasha658@gmail.com">sameerpasha658@gmail.com</a></p>
+          <p class="text-sm text-gray-300">Phone: <a class="accent" href="tel:+918088989186">+91 8088989186</a></p>
+        </div>
+      </aside>
 
-        // Smooth scroll behavior for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-    </script>
+    </section>
+
+    <!-- featured projects preview -->
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold text-white">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        <!-- Project Card sample - link to projects.html or individual case study -->
+        <a class="card hover:scale-105 transition" href="projects/pizza-analysis.html">
+          <div class="project-thumb">Pizza Analysis</div>
+          <h3 class="mt-3 font-semibold text-white">Pizza Sales and Performance Analytics</h3>
+          <div class="text-sm text-gray-400 mt-2">Python • SQL • MySQL • Data Analysis</div>
+        </a>
+
+        <a class="card hover:scale-105 transition" href="projects/crop-recommendation.html">
+          <div class="project-thumb">Crop Prediction</div>
+          <h3 class="mt-3 font-semibold text-white">Crop & Fertilizer Recommendation</h3>
+          <div class="text-sm text-gray-400 mt-2">Python • Pandas • scikit-learn • Flask • Render</div>
+        </a>
+
+        <a class="card hover:scale-105 transition" href="projects/automated-bulk-email-sender.html">
+          <div class="project-thumb">Automated Bulk Email Sender</div>
+          <h3 class="mt-3 font-semibold text-white">Automated Bulk Email Sender Using SMTP Server</h3>
+          <div class="text-sm text-gray-400 mt-2">Python • Tkinter • SQl • GUI</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>&copy; 2025 Sumer Pasha • Built for Data analytics and Science</small>
+    </div>
+  </footer>
+
+  <!-- EmailJS (placeholder) + main JS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
-
-
-

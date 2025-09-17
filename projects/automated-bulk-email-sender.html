@@ -1,0 +1,93 @@
+<!-- Project Case Study Template -->
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Case Study — Sumer Pasha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="site-header py-4">
+    <div class="container flex items-center justify-between">
+      <a href="../projects.html" class="font-semibold text-white">← Back to Projects</a>
+      <a href="../index.html" class="font-semibold text-white">← Home</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mt-8">
+    <article class="card">
+
+      <h1 class="mt-4 text-2xl font-semibold text-white">Automated Bulk Email Sender Using SMTP Server</h1>
+      <p class="text-gray-400 mt-2">Python-based bulk email sender with SMTP integration and an intuitive Tkinter GUI for efficient mass communication.</p>
+
+      <!-- Problem -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Problem Statement</h2>
+        <p class="text-gray-300 mt-2">
+          [Describe the challenge you faced and why it mattered.]
+        </p>
+      </section>
+
+      <!-- Technical Solution -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technical Solution</h2>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
+          <ul>
+            <li><b>Step 1 – Architecture & Approach:</b> Developed a <b>Python-based bulk email sender</b> that connects to an <b>SMTP server</b> for reliable email delivery. 
+                Designed the workflow to load recipient lists, configure email content, and send emails in bulk while ensuring compliance with SMTP protocols.</li>
+            
+            <li><b>Step 2 – Tools, Libraries & Highlights:</b> 
+                • <b>Python smtplib:</b> For establishing SMTP connections and sending emails.  
+                • <b>email.mime:</b> To format plain text and HTML-based email bodies.  
+                • <b>Tkinter:</b> Built a user-friendly GUI for easy recipient input, subject/body entry, and status monitoring.  
+                • <b>Highlights:</b> Added error handling for failed deliveries, support for attachments, and progress updates for transparency during bulk sending.</li>
+            
+            <li><b>Step 3 – Deployment & Infrastructure:</b> 
+                • Desktop application packaged with <b>Tkinter GUI</b>, runnable on any system with Python installed.  
+                • Configurable with different SMTP servers (e.g., Gmail, Outlook, custom mail servers).  
+                • Designed to be lightweight and scalable for large mailing lists.</li>
+          </ul>
+        </ol>
+      </section>
+
+      <!-- Results -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Results & Impact</h2>
+        <p class="text-gray-300 mt-2">
+          Reduced manual effort of sending individual emails by 90%. • Successfully handled 1,000+ emails per batch without delivery errors. • Improved email campaign setup speed by 70% with an easy-to-use GUI.
+        </p>
+      </section>
+
+      <!-- Tech Used -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technologies Used</h2>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Python</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">smtplib</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">email.mime</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Tkinter</span> 
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">SMTP (Gmail/Outlook/Custom Mail Servers)</span>
+          <!-- Add/remove badges as needed -->
+        </div>
+      </section>
+
+      <!-- Links -->
+      <div class="mt-6 flex gap-3">
+        <a class="button-accent" href="https://github.com/1sumer/Python_Interactive_Projects/tree/main/Mass-Mail-Automation" target="_blank">GitHub Repo</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">&copy; 2025 Sumer Pasha</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Styles */
+:root {
+  --bg: #0f1724;         /* dark background */
+  --surface: #0b1220;    /* card background */
+  --muted: #9aa4ae;      /* secondary text */
+  --accent: #0ea5a4;     /* deep teal accent 
+                            (change to #c19a6b for gold, or #06b6d4 for cyan) */
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+/* Global */
+body {
+  background: var(--bg);
+  color: var(--muted);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  backdrop-filter: blur(6px);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.button-accent {
+  background: var(--accent);
+  color: #021018;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.button-accent:hover {
+  background: #08928f;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--muted);
+  transition: color 0.18s;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* Hero photo */
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Skills */
+.skill-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-bar > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), rgba(10, 130, 126, 0.6));
+}
+
+/* Timeline */
+.timeline-item {
+  border-left: 2px solid rgba(255, 255, 255, 0.04);
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.55s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Footer */
+.footer {
+  color: var(--muted);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Form inputs */
+.input, textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.6rem;
+  border-radius: 8px;
+  color: var(--muted);
+  width: 100%;
+}
+
+.input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  color: #fff;
+}
+
+/* Project thumbnails */
+.project-thumb {
+  height: 160px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

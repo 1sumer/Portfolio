@@ -1,0 +1,82 @@
+<!-- Project Case Study Template -->
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Case Study — Sumer Pasha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="site-header py-4">
+    <div class="container flex items-center justify-between">
+      <a href="../projects.html" class="font-semibold text-white">← Back to Projects</a>
+      <a href="../index.html" class="font-semibold text-white">← Home</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mt-8">
+    <article class="card">
+
+      <h1 class="mt-4 text-2xl font-semibold text-white">Pizza Sales and Performance Analytics</h1>
+      <p class="text-gray-400 mt-2">End-to-end data analysis of a pizza chain’s sales to drive revenue growth and operational efficiency.</p>
+
+      <!-- Problem -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Problem Statement</h2>
+        <p class="text-gray-300 mt-2">
+          The pizza chain had large volumes of transactional sales data but lacked a consolidated view of customer behavior, product performance, and sales patterns. Without clear insights, it was difficult for management to optimize inventory, identify best-selling products, and align marketing with peak demand periods.
+        </p>
+      </section>
+
+      <!-- Technical Solution -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technical Solution</h2>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
+          <ul> <li><b>Step 1 – Architecture & Approach:</b> Built an integrated pipeline where <b>SQL Server</b> was used as the data source and <b>Python</b> handled the extraction, transformation, and visualization. Queries were structured to capture time-based trends, product-level sales, and category-level performance. </li> 
+               <li><b>Step 2 – Key Algorithms, Libraries & Highlights:</b> • <b>SQL:</b> Advanced queries using joins, CTEs, subqueries, and aggregations to analyze revenue, customer preferences, and ingredient usage. • <b>Python Libraries:</b> pandas (ETL & transformations), matplotlib & seaborn (visualizations). • <b>Highlights:</b> Generated insights on peak order times, high-performing categories, and seasonal demand. </li> 
+               <li><b>Step 3 – Deployment & Reporting:</b> • Reports were generated as Python-driven charts and Jupyter notebooks. • Final outputs included revenue trends, top products, and customer segmentation. • Findings shared with business teams to support marketing, operations, and menu optimization. </li> 
+          </ul>
+        </ol>
+      </section>
+
+      <!-- Results -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Results & Impact</h2>
+        <p class="text-gray-300 mt-2">
+
+          Identified top 10 best-selling pizzas contributing ~60% of total revenue. • Pinpointed peak sales hours (12–2 PM & 6–9 PM) for targeted marketing. • Improved decision-making for inventory planning and promotions, reducing waste and boosting margins.
+
+        </p>
+      </section>
+
+      <!-- Tech Used -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technologies Used</h2>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">SQL Server (Joins, CTEs, subqueries, aggregations)</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Python (pandas, matplotlib, seaborn)</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Python-driven visualizations</span>
+          <!-- Add/remove badges as needed -->
+        </div>
+      </section>
+
+      <!-- Links -->
+      <div class="mt-6 flex gap-3">
+        <a class="button-accent" href="https://github.com/1sumer/Python-EDA-Projects/tree/main/Pizza" target="_blank">GitHub Repo</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">&copy; 2025 Sumer Pasha</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

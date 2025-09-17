@@ -1,0 +1,80 @@
+<!-- Project Case Study Template -->
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Case Study — Sumer Pasha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="site-header py-4">
+    <div class="container flex items-center justify-between">
+      <a href="../projects.html" class="font-semibold text-white">← Back to Projects</a>
+      <a href="../index.html" class="font-semibold text-white">← Home</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mt-8">
+    <article class="card">
+      
+      <h1 class="mt-4 text-2xl font-semibold text-white">Hospitality Analysis </h1>
+      <p class="text-gray-400 mt-2">Data-driven insights to optimize hotel revenue, occupancy, and customer satisfaction using interactive dashboards.</p>
+
+      <!-- Problem -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Problem Statement</h2>
+        <p class="text-gray-300 mt-2">
+          Hotel chains often struggle to track performance across multiple properties, booking channels, and customer segments. Key metrics like occupancy, cancellations, and revenue leakage are fragmented across systems, making it hard for management to identify trends and take quick action. The challenge was to build a centralized analytics solution for better decision-making.
+        </p>
+      </section>
+
+      <!-- Technical Solution -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technical Solution</h2>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
+          <ul> <li><b>Step 1 – Architecture & Approach:</b> Designed an <b>end-to-end BI solution</b> by connecting raw hotel data (bookings, revenue, ratings, occupancy) into Power BI. Data cleaning and transformation were performed, followed by creating a star-schema model for easy reporting. </li> 
+               <li><b>Step 2 – Key Algorithms, Libraries & Highlights:</b> • Built <b>DAX measures</b> for KPIs: revenue vs. realized revenue, occupancy %, cancellation %, and average ratings. • Created calculated columns for segmentation by <b>hotel category, city, room type, platform, and day type</b>. • Designed <b>interactive dashboards</b> for drill-down analysis (property → city → room type). </li> 
+               <li><b>Step 3 – Deployment & Infrastructure:</b> • Dashboards published to <b>Power BI Service</b> for management access. • Role-based access applied to ensure secure insights sharing. • Enabled scheduled data refresh for near real-time analytics. </li> 
+          </ul>
+        </ol>
+      </section>
+
+      <!-- Results -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Results & Impact</h2>
+        <p class="text-gray-300 mt-2">
+          Improved revenue tracking with realized vs. generated revenue visibility.
+        </p>
+      </section>
+
+      <!-- Tech Used -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technologies Used</h2>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Power BI</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">DAX (measures, calculated columns)</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Hotel booking, revenue, and customer feedback datasets</span>
+          <!-- Add/remove badges as needed -->
+        </div>
+      </section>
+
+      <!-- Links -->
+      <div class="mt-6 flex gap-3">
+        <a class="button-accent" href="https://github.com/1sumer/Power-BI/tree/main/Hospitality-Domain" target="_blank">GitHub Repo</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">&copy; 2025 Sumer Pasha</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- Project Case Study Template -->
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Case Study — Sumer Pasha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="site-header py-4">
+    <div class="container flex items-center justify-between">
+      <a href="../projects.html" class="font-semibold text-white">← Back to Projects</a>
+      <a href="../index.html" class="font-semibold text-white">← Home</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mt-8">
+    <article class="card">
+
+      <h1 class="mt-4 text-2xl font-semibold text-white">Crop & Fertilizer Recommendation System.</h1>
+      <p class="text-gray-400 mt-2">AI-powered system that recommends the best crop and fertilizer for healthier yields based on soil and weather conditions.</p>
+
+      <!-- Problem -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Problem Statement</h2>
+        <p class="text-gray-300 mt-2">
+          Farmers often rely on traditional knowledge or guesswork to decide which crop to plant and which fertilizer to use. This leads to reduced yield, inefficient fertilizer use, and higher costs. The challenge was to build a data-driven decision support system that could guide farmers with accurate predictions in real time.
+        </p>
+      </section>
+
+      <!-- Technical Solution -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technical Solution</h2>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
+          <ul><li><b>Step 1 – Architecture & Approach:</b> Built a Flask-based web application where soil and weather data are collected as inputs. The data flows through preprocessing (feature scaling, handling missing values) before being fed into a <b>Random Forest Classifier</b>. The model predicts the optimal crop type and suggests a matching fertilizer.</li> 
+              <li><b>Step 2 – Algorithms, Libraries & Highlights:</b> • <b>Machine Learning:</b> Random Forest Classifier for multi-class classification of crops. • <b>Libraries:</b> Pandas (data handling), scikit-learn (model building & evaluation), Numpy (math operations). • <b>Interface:</b> Tkinter GUI for desktop version and Flask web backend for online deployment. • <b>Highlights:</b> Achieved high prediction accuracy with minimal overfitting by using ensemble learning. </li> 
+              <li><b>Step 3 – Deployment & Infrastructure:</b> • Backend hosted on <b>Render Cloud</b>. • Packaged ML model integrated into Flask routes for real-time predictions. • Future scalability planned with AWS SageMaker for large-scale deployment and mobile app integration. </li> 
+          </ul>
+        </ol>
+      </section>
+
+      <!-- Results -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Results & Impact</h2>
+        <p class="text-gray-300 mt-2">
+          Enabled data-driven crop selection, reducing dependency on guesswork.
+        </p>
+      </section>
+
+      <!-- Tech Used -->
+      <section class="mt-6">
+        <h2 class="font-semibold text-white">Technologies Used</h2>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Python</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Pandas</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Numpy</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">scikit-learn</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Random Forest Classifier</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">SQL</span>
+          <span class="px-3 py-1 bg-gray-900 text-gray-300 rounded">Render Cloud</span>
+          <!-- Add/remove badges as needed -->
+        </div>
+      </section>
+
+      <!-- Links -->
+      <div class="mt-6 flex gap-3">
+        <a class="button-accent" href="https://github.com/1sumer/Agriculture_Pridiction" target="_blank">GitHub Repo</a>
+        <a class="button-accent" href="https://agriculture-pridiction.onrender.com/" target="_blank">Live Demo</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">&copy; 2025 Sumer Pasha</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
