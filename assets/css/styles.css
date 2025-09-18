@@ -144,3 +144,35 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* Keyframes for rotation */
+@keyframes rotateText {
+  0%   { opacity: 0; transform: translateY(10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  30%  { opacity: 1; transform: translateY(0); }
+  40%  { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 0; }
+}
+
+.tagline {
+  position: relative;
+  display: inline-block;
+  min-height: 2em;  /* more height for bigger text */
+}
+
+.tagline div {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  animation: rotateText 6s linear infinite;
+  font-weight: 700;       /* bold */
+  font-size: 1.25rem;     /* ~20px (same as Tailwind text-lg) */
+  color: #e5e7eb;         /* Tailwind gray-200 */
+}
+
+/* Timing for each role */
+.tagline div:nth-child(1) { animation-delay: 0s; }
+.tagline div:nth-child(2) { animation-delay: 2s; }
+.tagline div:nth-child(3) { animation-delay: 4s; }

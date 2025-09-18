@@ -20,8 +20,12 @@
       <a href="index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-md bg-gradient-to-br from-teal-600 to-cyan-400 flex items-center justify-center text-white font-bold">SP</div>
         <div>
-          <div class="text-white font-semibold">Sumer Pasha</div>
-          <div class="text-xs text-muted text-gray-400">Data Analyst • Python Automation Engineer • Machine Learning Engineer</div>
+          <div class="text-white font-extrabold text-xl">Sumer Pasha</div>
+          <div class="tagline text-lg font-bold text-gray-200">
+            <div>Data Analyst</div>
+            <div>Python Automation Engineer</div>
+            <div>Machine Learning Engineer</div>
+          </div>
         </div>
       </a>
 
@@ -52,6 +56,32 @@
   <!-- MAIN CONTENT -->
   <main class="container mt-8">
     <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <!-- quick contact / social sidebar (LEFT SIDE now) -->
+      <aside>
+        <div class="card text-center">
+          <img src="assets/imgs/Sameer.jpg" alt="Sumer" class="hero-photo mx-auto mb-3" />
+          <div class="text-white font-semibold">Sumer Pasha</div>
+          <div class="text-xs text-gray-400">• Data Analyst • Python Automation Engineer • Machine Learning Engineer</div>
+
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+          <div class="mt-3 grid grid-cols-6 gap-4 text-orange-500 text-xl">
+            <a href="mailto:sameerpasha658@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+918088989186" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/1sumer" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sumer-pasha-70884a152/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://1sumer.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+
+        <div class="card mt-6">
+          <h3 class="font-semibold text-white">Contact</h3>
+          <p class="text-sm mt-2 text-gray-300">Email: <a class="accent" href="mailto:sameerpasha658@gmail.com">sameerpasha658@gmail.com</a></p>
+          <p class="text-sm text-gray-300">Phone: <a class="accent" href="tel:+918088989186">+91 8088989186</a></p>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT (shifted to right side) -->
       <div class="md:col-span-2">
         <div class="card">
           <div class="flex items-start gap-6">
@@ -86,34 +116,9 @@
             <li>Possess strong database management skills, optimizing data storage and retrieval efficiency with MySQL and MongoDB.</li>
           </ul>
         </div>
-
       </div>
-
-      <!-- quick contact / social sidebar -->
-      <aside>
-        <div class="card text-center">
-          <img src="assets/imgs/Sameer.jpg" alt="Sumer" class="hero-photo mx-auto mb-3" />
-          <div class="text-white font-semibold">Sumer Pasha</div>
-          <div class="text-xs text-gray-400">• Data Analyst • Python Automation Engineer • Machine Learning Engineer</div>
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-            <div class="mt-3 grid grid-cols-6 gap-4 text-orange-500 text-xl">
-                <a href="mailto:sameerpasha658@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+918088989186" aria-label="Phone"><i class="fas fa-phone"></i></a>
-                <a href="https://github.com/1sumer" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sumer-pasha-70884a152/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://1sumer.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fas fa-globe"></i></a>
-            </div>
-
-        <div class="card mt-6">
-          <h3 class="font-semibold text-white">Contact</h3>
-          <p class="text-sm mt-2 text-gray-300">Email: <a class="accent" href="mailto:sameerpasha658@gmail.com">sameerpasha658@gmail.com</a></p>
-          <p class="text-sm text-gray-300">Phone: <a class="accent" href="tel:+918088989186">+91 8088989186</a></p>
-        </div>
-      </aside>
-
     </section>
+
 
     <!-- featured projects preview -->
     <section class="mt-10">
@@ -121,19 +126,25 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
         <!-- Project Card sample - link to projects.html or individual case study -->
         <a class="card hover:scale-105 transition" href="projects/pizza-analysis.html">
-          <div class="project-thumb">Pizza Analysis</div>
+          <div class="project-thumb">
+            <img src="assets/imgs/pizza.jpeg" alt="Pizza Analysis" style="width: 310px; height: 160px; border-radius:10px; object-fit: cover;">
+          </div>
           <h3 class="mt-3 font-semibold text-white">Pizza Sales and Performance Analytics</h3>
           <div class="text-sm text-gray-400 mt-2">Python • SQL • MySQL • Data Analysis</div>
         </a>
 
         <a class="card hover:scale-105 transition" href="projects/crop-recommendation.html">
-          <div class="project-thumb">Crop Prediction</div>
+          <div class="project-thumb">
+            <img src="assets/imgs/crop.jpeg" alt="Crop Prediction" style="width: 310px; height: 160px; border-radius:10px; object-fit: cover;">
+          </div>
           <h3 class="mt-3 font-semibold text-white">Crop & Fertilizer Recommendation</h3>
           <div class="text-sm text-gray-400 mt-2">Python • Pandas • scikit-learn • Flask • Render</div>
         </a>
 
         <a class="card hover:scale-105 transition" href="projects/automated-bulk-email-sender.html">
-          <div class="project-thumb">Automated Bulk Email Sender</div>
+          <div class="project-thumb">
+            <img src="assets/imgs/email.jpeg" alt="Automated Bulk Email Sender" style="width: 310px; height: 160px; border-radius:10px; object-fit: cover;">
+          </div>
           <h3 class="mt-3 font-semibold text-white">Automated Bulk Email Sender Using SMTP Server</h3>
           <div class="text-sm text-gray-400 mt-2">Python • Tkinter • SQl • GUI</div>
         </a>

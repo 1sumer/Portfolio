@@ -13,7 +13,27 @@
   <!-- Header -->
   <header class="site-header py-4">
     <div class="container flex items-center justify-between">
-      <a href="index.html" class="font-semibold text-white">← Home</a>
+      <a href="#" class="font-semibold text-white"></a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="certifications.html">Certifications</a>
+        <a class="nav-link" href="blogs.html">Blogs</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <button id="mobile-toggle" class="md:hidden bg-transparent p-2 rounded text-gray-200">☰</button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden container mt-2">
+      <a class="block py-2" href="index.html">Home</a>
+      <a class="block py-2" href="projects.html">Projects</a>
+      <a class="block py-2" href="skills.html">Skills</a>
+      <a class="block py-2" href="experience.html">Experience</a>
+      <a class="block py-2" href="certifications.html">Certifications</a>
+      <a class="block py-2" href="blogs.html">Blogs</a>
+      <a class="block py-2" href="contact.html">Contact</a>
     </div>
   </header>
 
