@@ -36,11 +36,40 @@
       <!-- Technical Solution -->
       <section class="mt-6">
         <h2 class="font-semibold text-white">Technical Solution</h2>
-        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
-          <ul><li><b>Step 1 – Architecture & Approach:</b> Built a Flask-based web application where soil and weather data are collected as inputs. The data flows through preprocessing (feature scaling, handling missing values) before being fed into a <b>Random Forest Classifier</b>. The model predicts the optimal crop type and suggests a matching fertilizer.</li> 
-              <li><b>Step 2 – Algorithms, Libraries & Highlights:</b> • <b>Machine Learning:</b> Random Forest Classifier for multi-class classification of crops. • <b>Libraries:</b> Pandas (data handling), scikit-learn (model building & evaluation), Numpy (math operations). • <b>Interface:</b> Tkinter GUI for desktop version and Flask web backend for online deployment. • <b>Highlights:</b> Achieved high prediction accuracy with minimal overfitting by using ensemble learning. </li> 
-              <li><b>Step 3 – Deployment & Infrastructure:</b> • Backend hosted on <b>Render Cloud</b>. • Packaged ML model integrated into Flask routes for real-time predictions. • Future scalability planned with AWS SageMaker for large-scale deployment and mobile app integration. </li> 
-          </ul>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-4">
+
+          <!-- Step 1 -->
+          <li>
+            <b>Step 1 – Architecture & Approach:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li>Built a <b>Flask-based web application</b> where soil and weather data are collected as inputs.</li>
+              <li>Data undergoes preprocessing — including <b>feature scaling</b> and <b>handling missing values</b>.</li>
+              <li>The cleaned data is passed into a <b>Random Forest Classifier</b> model.</li>
+              <li>The model predicts the <b>optimal crop type</b> and recommends a matching <b>fertilizer</b>.</li>
+            </ul>
+          </li>
+
+          <!-- Step 2 -->
+          <li>
+            <b>Step 2 – Algorithms, Libraries & Highlights:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li><b>Machine Learning:</b> Random Forest Classifier for multi-class crop prediction.</li>
+              <li><b>Libraries:</b> Pandas (data handling), scikit-learn (model building & evaluation), NumPy (mathematical operations).</li>
+              <li><b>Interface:</b> Tkinter GUI for desktop version and Flask backend for web deployment.</li>
+              <li><b>Highlights:</b> Achieved high prediction accuracy and reduced overfitting using ensemble learning.</li>
+            </ul>
+          </li>
+
+          <!-- Step 3 -->
+          <li>
+            <b>Step 3 – Deployment & Infrastructure:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li>Backend hosted on <b>Render Cloud</b> for reliability and scalability.</li>
+              <li>Packaged ML model integrated with Flask routes for <b>real-time predictions</b>.</li>
+              <li>Future scalability planned using <b>AWS SageMaker</b> and <b>mobile app integration</b>.</li>
+            </ul>
+          </li>
+
         </ol>
       </section>
 

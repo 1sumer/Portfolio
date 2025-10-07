@@ -36,27 +36,42 @@
       <!-- Technical Solution -->
       <section class="mt-6">
         <h2 class="font-semibold text-white">Technical Solution</h2>
-        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-2">
-          <ul>
-            <li><b>Step 1 – Architecture & Approach:</b> Designed an <b>ETL-style workflow</b> using n8n. The workflow sequence followed: 
-                <b>Form Submission → Database/Sheets Storage → User Confirmation Email → Admin Notification → Frontend Response</b>. 
-                Data was captured in real time via <b>webhooks</b> from Google Forms or custom HTML forms, ensuring seamless automation.</li>
-            
-            <li><b>Step 2 – Tools, Libraries & Highlights:</b> 
-                • <b>n8n:</b> Orchestrated workflows and triggered automated actions.  
-                • <b>Google Sheets/MySQL:</b> Structured storage of submitted form data.  
-                • <b>Gmail API:</b> Automated user confirmation and admin notification emails.  
-                • <b>Webhooks:</b> Sent real-time responses back to the frontend for smooth UX.  
-                • <b>Highlights:</b> Configured conditional notification rules, reusable email templates, and error-handling logic for failed submissions.</li>
-            
-            <li><b>Step 3 – Deployment & Infrastructure:</b> 
-                • Workflow deployed on <b>n8n cloud/self-hosted instance</b>.  
-                • Secure integration with <b>Google APIs and Gmail</b> for data and email automation.  
-                • Scalable architecture capable of handling large volumes of submissions without manual intervention.</li>
-          </ul>
+        <ol class="list-decimal ml-6 text-gray-300 mt-2 space-y-4">
+
+          <!-- Step 1 -->
+          <li>
+            <b>Step 1 – Architecture & Approach:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li>Designed an <b>ETL-style workflow</b> using n8n.</li>
+              <li>Workflow sequence: <b>Form Submission → Database/Sheets Storage → User Confirmation Email → Admin Notification → Frontend Response</b>.</li>
+              <li>Data captured in real time via <b>webhooks</b> from Google Forms or custom HTML forms, ensuring seamless automation.</li>
+            </ul>
+          </li>
+
+          <!-- Step 2 -->
+          <li>
+            <b>Step 2 – Tools, Libraries & Highlights:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li><b>n8n:</b> Orchestrated workflows and triggered automated actions.</li>
+              <li><b>Google Sheets/MySQL:</b> Structured storage of submitted form data.</li>
+              <li><b>Gmail API:</b> Automated user confirmation and admin notification emails.</li>
+              <li><b>Webhooks:</b> Sent real-time responses back to the frontend for smooth UX.</li>
+              <li><b>Highlights:</b> Configured conditional notification rules, reusable email templates, and error-handling logic for failed submissions.</li>
+            </ul>
+          </li>
+
+          <!-- Step 3 -->
+          <li>
+            <b>Step 3 – Deployment & Infrastructure:</b>
+            <ul class="list-disc ml-6 mt-1 space-y-1">
+              <li>Workflow deployed on <b>n8n cloud/self-hosted instance</b>.</li>
+              <li>Secure integration with <b>Google APIs and Gmail</b> for data and email automation.</li>
+              <li>Scalable architecture capable of handling large volumes of submissions without manual intervention.</li>
+            </ul>
+          </li>
+
         </ol>
       </section>
-
       <!-- Results -->
       <section class="mt-6">
         <h2 class="font-semibold text-white">Results & Impact</h2>
